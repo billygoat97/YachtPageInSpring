@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <mata charset="UTF-8"/>
+        <title>로그인</title>
+        <link rel="stylesheet" th:href="@{/style.css}">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="form-wrap">
+                <div class="social-icons">
+                    <img src="img/fb.png" alt="facebook">
+                    <img src="img/tw.png" alt="twitter">
+                    <img src="img/gl.png" alt="google">
+                </div>
+                <form method="POST" id="register" th:action="@{/register}" class="input-group">
+                    <input type="text" name="username" class="input-field" placeholder="Your ID" required>
+                    <input type="password" name="password" class="input-field" placeholder="Your Password" required>
+                    <input type="text" name="fullName" class="input-field" placeholder="Your Full Name" required>
+                    <input type="email" name="email" class="input-field" placeholder="Email" required>
+                    <input type="text" name="phoneNumber" class="input-field" placeholder="Phone Number" required>
+                    <button class="submit">REGISTER</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
