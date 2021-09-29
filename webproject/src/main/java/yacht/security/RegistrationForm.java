@@ -8,14 +8,14 @@ import yacht.User;
 public class RegistrationForm {
 	
 	private String username;
-	private String pwd;
+	private String password;
 	private String fullname;
 	private String email;
 	private String phone;
 	
 	public User toUser(PasswordEncoder passwordEncoder) {
 		return new User(
-				username, passwordEncoder.encode(pwd),
+				username, passwordEncoder.encode(password),
 				fullname, email, phone);
 	}
 }

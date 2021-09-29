@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-@Entity
+@Entity(name="user")
 @Data
 @NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
 @RequiredArgsConstructor
@@ -30,11 +30,11 @@ public class User implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	private final String username;
-	private final String pwd;
+	private final String password;
 	private final String fullname;
 	private final String email;
 	private final String phone;

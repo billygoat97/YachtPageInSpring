@@ -20,21 +20,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
    
    @Override
    protected void configure(HttpSecurity http) throws Exception {
-      http
-         .authorizeRequests()
-         .antMatchers("/home")
-         .access("hasRole('ROLE_USER')")
-         .and()
-            .formLogin()
-            .loginPage("/login")
-            .loginProcessingUrl("/")
-         .and()
-            .logout()
-            .logoutSuccessUrl("/")
-         .and()
-            .csrf()
-            .ignoringAntMatchers("/h2-console/**")
-            .disable();
+//      http
+//         .authorizeRequests()
+//         .antMatchers("/home")
+//         .access("hasRole('ROLE_USER')")
+//         .and()
+//            .formLogin()
+//            .loginPage("/login")
+//            .loginProcessingUrl("/")
+//         .and()
+//            .logout()
+//            .logoutSuccessUrl("/")
+//         .and()
+//            .csrf()
+//            .ignoringAntMatchers("/h2-console/**")
+//            .disable();
       
       http
 	      .authorizeRequests()
